@@ -2,9 +2,13 @@
   font-family: worksans;
   src: url(../fonts/WorkSans-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: lora;
+  src: url(../fonts/Lora-VariableFont_wght.ttf);
+}
 a {
   text-decoration: none;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   border: solid white 1px;
   padding: 15px 30px;
   color: white;
@@ -16,6 +20,7 @@ a:hover {
 }
 
 span {
+  color: white;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px #000000;
 }
@@ -37,15 +42,18 @@ main {
 
 html {
   font-size: 62.5%;
-  font-family: "worksans", Arial, Helvetica, sans-serif;
+  font-family: "lora", Arial, Helvetica, sans-serif;
   color: white;
+}
+
+p {
+  font-family: "worksans", Arial, Helvetica, sans-serif;
 }
 
 header {
   background-color: black;
   display: flex;
   justify-content: center;
-  padding-bottom: 10rem;
 }
 header img {
   width: 1px;
@@ -57,22 +65,26 @@ header img {
   background-color: black;
   height: 80vh;
   color: white;
-  padding: 10rem;
-  padding-bottom: 0;
+  padding: 10vw;
   text-align: center;
   text-transform: uppercase;
 }
 .california p {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: bold;
+  text-transform: none;
+}
+.california p:nth-of-type(2) {
+  -webkit-text-stroke: 1.5px #000000;
 }
 .california h1 {
-  font-size: clamp(8rem, 8vw, 10rem);
+  font-size: clamp(4rem, 6vw, 8rem);
 }
 .california h2 {
-  font-size: clamp(8rem, 8vw, 10rem);
+  font-size: clamp(4rem, 6vw, 8rem);
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px #FFFFFF;
-  margin-top: -5rem;
+  margin-top: -2rem;
 }
 .california article:nth-of-type(1) {
   margin-bottom: 20rem;
@@ -83,33 +95,36 @@ header img {
   justify-content: space-between;
 }
 .california article:nth-of-type(2) img {
-  width: 10rem;
+  min-width: 15vw;
+  max-height: 8vh;
 }
 
 .wildfire {
-  padding: 10rem;
+  padding: 10vw;
   padding-top: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .wildfire h2 {
-  font-size: clamp(8rem, 8vw, 10rem);
-  width: 75vw;
+  grid-column: 1/3;
+  font-size: clamp(4rem, 6vw, 8rem);
+  width: 70vw;
   margin-bottom: 10rem;
   position: relative;
   z-index: 10;
-  text-align: center;
 }
 .wildfire article p {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 2rem);
 }
 .wildfire article h3 {
-  font-size: clamp(8rem, 8vw, 10rem);
+  font-size: clamp(4rem, 6vw, 8rem);
   margin-bottom: 10rem;
 }
 .wildfire img {
-  width: 40vw;
-  position: absolute;
-  right: 0%;
-  top: 180%;
+  margin-top: -10rem;
+  grid-column: 2/3;
+  min-width: 50vw;
+  width: 70vw;
 }
 
 .pictures article {
@@ -134,17 +149,16 @@ header img {
   justify-self: center;
 }
 .pictures article div {
-  grid-column: 2/4;
+  grid-column: 2/3;
 }
 .pictures article div h2 {
-  font-size: clamp(8rem, 8vw, 10rem);
-  width: 42vw;
+  font-size: clamp(4rem, 6vw, 8rem);
+  width: 32vw;
 }
 .pictures article div p {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  width: 35vw;
-  font-weight: bold;
-  line-height: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1rem, 2vw, 2rem);
+  line-height: clamp(1.5rem, 4vw, 3rem);
+  width: 30vw;
 }
 .pictures article img:nth-of-type(3) {
   margin-top: -25rem;
@@ -171,13 +185,12 @@ header img {
   grid-row: 5;
   width: 20vw;
 }
-.pictures article p {
+.pictures article > p {
   grid-row: 5;
   grid-column: 2/4;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   width: 30vw;
-  font-weight: bold;
-  line-height: clamp(2rem, 5vw, 3rem);
+  line-height: clamp(1.5rem, 4vw, 3rem);
 }
 .pictures article img:nth-of-type(7) {
   width: 25vw;
@@ -197,16 +210,16 @@ header img {
   margin-bottom: 5rem;
 }
 .golden-bear article:nth-of-type(1) div p {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   font-weight: bold;
 }
 .golden-bear article:nth-of-type(1) div h3 {
-  font-size: clamp(8rem, 8vw, 10rem);
+  font-size: clamp(4rem, 6vw, 8rem);
   margin-top: 2rem;
   width: 10vw;
 }
 .golden-bear article:nth-of-type(1) div h4 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   margin-bottom: 3rem;
   width: 30vw;
 }
@@ -221,8 +234,7 @@ header img {
   z-index: 10;
 }
 .golden-bear article:nth-of-type(2) img:nth-of-type(2) {
-  width: 40vw;
-  height: 50vh;
+  width: 25vw;
   margin-left: -10rem;
   align-self: center;
   margin-bottom: -12rem;
@@ -240,16 +252,16 @@ header img {
   padding-top: 30rem;
 }
 .poppy-bear article:nth-of-type(1) div p {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   font-weight: bold;
 }
 .poppy-bear article:nth-of-type(1) div h3 {
-  font-size: clamp(8rem, 8vw, 10rem);
+  font-size: clamp(4rem, 6vw, 8rem);
   margin-top: 2rem;
   width: 10vw;
 }
 .poppy-bear article:nth-of-type(1) div h4 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   margin-bottom: 3rem;
   width: 30vw;
 }
@@ -279,11 +291,11 @@ header img {
   width: 40vw;
 }
 .june article:nth-of-type(1) p {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   margin-bottom: 5rem;
 }
 .june article:nth-of-type(1) h4 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 4vw, 3rem);
   margin-bottom: 5rem;
 }
 .june article:nth-of-type(2) {
@@ -300,7 +312,7 @@ header img {
   margin-right: 8px;
 }
 .june article:nth-of-type(2) div:nth-of-type(1) p {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   margin-bottom: 3rem;
 }
 .june article:nth-of-type(2) div:nth-of-type(2) {
@@ -334,15 +346,14 @@ header img {
   position: absolute;
   right: -90%;
   top: 0%;
-  height: 10vh;
   width: 250vw;
   transform: rotate(40deg);
   background-color: white;
   color: black;
-  font-size: clamp(8rem, 8vw, 10rem);
+  font-size: clamp(4rem, 6vw, 8rem);
 }
 .june .stripe h5 {
-  animation: rotation 20s infinite alternate;
+  animation: rotation 3.5s infinite alternate linear;
 }
 
 @keyframes circle {
@@ -355,10 +366,10 @@ header img {
 }
 @keyframes rotation {
   from {
-    transform: translateX(-25%);
+    transform: translateX(0%);
   }
   to {
-    transform: translateX(55%);
+    transform: translateX(50%);
   }
 }
 
